@@ -1,0 +1,59 @@
+{
+  "browser": {
+    "headless": true,
+    "disable_images": true,
+    "disable_css": false,
+    "disable_javascript": false,
+    "user_agent_rotation": true,
+    "window_size": {
+      "width": 1920,
+      "height": 1080
+    },
+    "chrome_options": [
+      "--no-sandbox",
+      "--disable-dev-shm-usage",
+      "--disable-gpu",
+      "--disable-extensions",
+      "--disable-plugins"
+    ]
+  },
+  "performance": {
+    "workers": 10,
+    "chunk_size": 50,
+    "timeout": 30,
+    "browser_timeout": 25,
+    "save_interval": 10,
+    "max_retries": 2,
+    "retry_delay": 1.0,
+    "memory_limit_mb": 4096
+  },
+  "detection": {
+    "wait_time": 5,
+    "scroll_detection": true,
+    "framework_detection": true,
+    "dom_analysis": true,
+    "javascript_execution_detection": true,
+    "content_change_detection": true,
+    "minimum_content_length": 100,
+    "framework_timeout": 10
+  },
+  "output": {
+    "format": "csv",
+    "include_screenshots": false,
+    "include_html_snapshots": false,
+    "compression": false,
+    "detailed_errors": true
+  },
+  "logging": {
+    "level": "INFO",
+    "file": null,
+    "console": true,
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  },
+  "proxy": {
+    "enabled": false,
+    "http_proxy": null,
+    "https_proxy": null,
+    "rotation": false
+  }
+}
